@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from "react";
 import './App.css';
 
-function App() {
+import MainViewer from "./components/MainViewer";
+import LayerPicker from "./components/LayerPicker"
+
+import * as Cesium from 'cesium';
+import { Drawer } from 'antd';
+
+
+
+function App(props) {
+  const [layers, setLayers] = useState(props.layers);
+  const [activeLayer, setActiveLayer] = useState(null);
+
+  function changeActiveLayer(uid) {
+    setActiveLayer(layers.filter((layer) => layer.uid === uid));
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div id="side-menu">
+        <LayerPicker
+          layers={layers}
+          changeActiveLayer={changeActiveLayer} />
+      </div>
+      <div id="viewer-container">
+        <MainViewer activeLayer={activeLayer} />
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;

@@ -1,3 +1,10 @@
+## 项目配置方式
+- 使用`npx create-react-app mission-1-new`创建一个基础的react项目
+- 使用craco-cesium，再上述基础上配置了cesium+resium的环境（我自己直接配置Cesium一直出问题，所以就用了这个库。）
+    - Resium介绍：[Resium官网](https://resium.reearth.io/)、[Resium + create-react-app文档](https://resium.reearth.io/installation#1-create-react-app)  
+    - craco介绍：[craco-github](https://github.com/reearth/craco-cesium#craco-cesium)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
