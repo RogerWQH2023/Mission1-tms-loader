@@ -4,7 +4,8 @@
     - Resium介绍：[Resium官网](https://resium.reearth.io/)、[Resium + create-react-app文档](https://resium.reearth.io/installation#1-create-react-app)  
     - craco介绍：[craco-github](https://github.com/reearth/craco-cesium#craco-cesium)
 ## 项目启动方式：
-- `yarn start`
+- 安装依赖——`yarn install`
+- 启动项目——`yarn start`
 
 # Getting Started with Create React App
 
