@@ -8,7 +8,10 @@ import * as Cesium from 'cesium';
 import { Drawer } from 'antd';
 
 
-
+/**
+ * @param {*} props.layers  内含图层信息，每个图层为{uid, name, url, description}
+ * @returns App组件
+ */
 function App(props) {
   const [layers, setLayers] = useState(props.layers);
   const [activeLayer, setActiveLayer] = useState(null);
@@ -21,6 +24,7 @@ function App(props) {
       <div id="side-menu">
         <LayerPicker
           layers={layers}
+          activeLayer={activeLayer}
           changeActiveLayer={changeActiveLayer} />
       </div>
       <div id="viewer-container">

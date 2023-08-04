@@ -13,7 +13,7 @@ const LAYER_URL = "https://deep-time.org/v1.0/api/data-central/dataset/5fd7fd2c-
   { name: "150 LtJ Tithonian", url: "https://deep-time.org/tms/ScotesePaleoMap/Map33a_LtJ_Tithonian_1504326/{z}/{x}/{reverseY}.png" },
   { name: "200 Triassic-Jurassic Boundary", url: "https://deep-time.org/tms/ScotesePaleoMap/Map43a_Triassic-Jurassic_Boundary_2004326/{z}/{x}/{reverseY}.png" }
 ]; */
-//首先加载一个Loading界面，体制正在读取图层
+//首先加载一个Loading界面，显示正在读取图层
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -41,7 +41,7 @@ layerFetch.then(response => {
   return LAYERS;
 }).then(LAYERS => {
   //const root = ReactDOM.createRoot(document.getElementById('root'));
-  //加载完毕后加载地球页面，以属性形式传入LAYERS。
+  //数据加载完毕后替换为地球页面，以属性形式传入LAYERS。
   root.render(
     <React.StrictMode>
       <div id='app'>

@@ -6,7 +6,11 @@ import { ImageryLayer } from "resium";
 
 
 
-
+/**
+ * 
+ * @param {*} props.activeLayers 所有需要显示的Layer 
+ * @returns 
+ */
 function ViewerLayer(props) {
     //一开始activeLayer可能没有，所以设置为NULL
     const Layers = props.activeLayer?.map(layer => {

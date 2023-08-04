@@ -3,7 +3,9 @@ import { Viewer } from "resium";
 import * as Cesium from 'cesium';
 import ViewerLayer from "../ViewerLayer"
 
-
+/**
+ * @param {*} props.activeLayer 所有需要显示的Layer
+ */
 function MainViewer(props) {
   //console.log(props.activeLayer);
   //const [activeLayer, setActiveLayer] = useState(props.activeLayer);
