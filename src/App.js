@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './App.css';
 
 import MainViewer from "./components/MainViewer";
 import LayerPicker from "./components/LayerPicker"
 
-import * as Cesium from 'cesium';
-import { Drawer } from 'antd';
+
 
 
 /**
@@ -13,17 +12,16 @@ import { Drawer } from 'antd';
  * @returns App组件
  */
 function App(props) {
-  const [layers, setLayers] = useState(props.layers);
   const [activeLayer, setActiveLayer] = useState(null);
 
   function changeActiveLayer(uid) {
-    setActiveLayer(layers.filter((layer) => layer.uid === uid));
+    setActiveLayer(props.layers.filter((layer) => layer.uid === uid));
   }
   return (
     <div>
       <div id="side-menu">
         <LayerPicker
-          layers={layers}
+          layers={props.layers}
           activeLayer={activeLayer}
           changeActiveLayer={changeActiveLayer} />
       </div>

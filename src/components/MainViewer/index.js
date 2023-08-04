@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Viewer } from "resium";
-import * as Cesium from 'cesium';
 import ViewerLayer from "../ViewerLayer"
 
 /**
